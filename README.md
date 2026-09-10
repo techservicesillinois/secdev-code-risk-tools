@@ -1,7 +1,7 @@
 ## About
 
-This repository is used by Cybersecurity operations teams at the 
-University of Illinois as a GitHub template.
+These tools are used by Cybersecurity operations teams at the
+University of Illinois to help assess security risks in code.
 
 This resource helps comply with University of Illinois
 Cybersecurity standards - including [IT-07][it07], [IT08][it08],
@@ -12,38 +12,25 @@ and [IT13][it13].
 [it13]: https://go.illinois.edu/secstd-IT13
 
 See [Cybersecurity Development on the Illinois Knowledge Base][kbsearch]
-for information about our development standards. 
+for information about our development standards.
 
 [kbsearch]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
-For steps we usually do after creating a new repository, see [After Creating a new Repository](https://github.com/techservicesillinois/secdev-template-repository/wiki/After-creating-a-new-repository).
+## Tools
 
-The remainder of this `README.md` contains example text.
+### Cybersecurity Review
 
-Information about how to fill out the data stores and endpoints can be found on the [Knowledge Base](https://answers.uillinois.edu/illinois/111571).
-
-## Data Sources
-
-For data sensitivity, see [Data Classification](https://www.cybersecurity.illinois.edu/data-classification/).
-
-|Data Store|Data Type|Sensitivity|Notes|
-|----------|---------|-----------|-----|
-
-## Endpoint Connections
-
-|Endpoint|Purpose|Stage|Access|Contact|
-|--------|-------|-----|------|-------|
+- SecDev maintains an AI "skill", `/cybersecurity-review` for identifying vulnerabilities in local source code.
+- We update this AI skill after OWASP updates the OWASP Top Ten, roughly every four years.
+- This skill is intended to guide remediation efforts and is not a substitute for a mature Software Development Lifecycle.
+  - We consider this skill suitable for exploration and education.
+  - We want to help interpret and respond to these reports - they can be confusing, may contain false positives, and will raise questions.
+- Campus IT Professionals can contact securitysupport@illinois.edu.
 
 ## Product Support
 
 This product is supported by Cybersecurity teams at the
 University of Illinois Urbana-Champaign on a best-effort basis.
 
-As of the last update to this README, the expected End-of-Life and 
-End-of-Support dates of this product are <YEAR MONTH>.
-
-End-of-Life was decided upon based on these dependencies:
-
-  - <dependency (YEAR MONTH) >
-  - <dependency (YEAR MONTH) >
-
+As of the last update to this README, the expected End-of-Life and
+End-of-Support dates of this product are 09/2027.
