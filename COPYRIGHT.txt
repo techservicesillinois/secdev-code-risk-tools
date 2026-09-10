@@ -1,0 +1,6 @@
+Copyright <year> <primary contributor 1>, <primary contributor 2>,
+<primary contributor 3> and the University of Illinois Board of Trustees
+
+This program is free software: you can redistribute it and/or modify it under the terms described in LICENSE.txt, or (at your option) any later version of the same license.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE.txt for more details.
