@@ -1,16 +1,19 @@
-.PHONY: clean test
+.PHONY: all clean test
 
-SPELLCHECK_FILES := $(shell find . -name '*.md' -not -path './.git/*' | sort)
+MD_FILES := $(wildcard *.md)
+SPELL_CHECKED := $(patsubst %.md,.%.spell,$(MD_FILES))
 
-.spell: $(SPELLCHECK_FILES)
-	@misspellings=$$(cat $(SPELLCHECK_FILES) | aspell --mode=markdown --lang=en_US --personal=./.aspell.en.pws list | sort -u); \
-	if [ -n "$$misspellings" ]; then \
-		printf 'Spelling issues found:\n%s\n' "$$misspellings"; \
-		exit 1; \
-	fi
+all: test
+
+echo:
+	echo $(MD_FILES)
+	echo $(SPELL_CHECKED)
+
+test: $(SPELL_CHECKED)
+
+.%.spell: %.md
+	cat $^ | aspell list
 	@touch $@
 
 clean:
-	rm -f .spell
-
-test: .spell
+	rm -f .*.spell

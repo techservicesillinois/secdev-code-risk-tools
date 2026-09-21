@@ -26,7 +26,7 @@ investigations/*
 .develop
 .lint
 .requirements.venv
-.spell
+.*.spell
 .static
 .venv/
 build/
