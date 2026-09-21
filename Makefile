@@ -1,7 +1,8 @@
 .PHONY: all clean test
 
-MD_FILES := $(wildcard *.md)
+MD_FILES := $(wildcard *.md) # Only checks top level .md files.
 SPELL_CHECKED := $(patsubst %.md,.%.spell,$(MD_FILES))
+ASPELL_OPTS ?= --mode=markdown --lang=en_US --personal=./.aspell.en.pws
 
 all: test
 
@@ -12,7 +13,7 @@ echo:
 test: $(SPELL_CHECKED)
 
 .%.spell: %.md
-	cat $^ | aspell list | sort -u | tee /dev/tty | grep -v '^'
+	! cat $^ | aspell $(ASPELL_OPTS) list | sort -u | grep .
 	@touch $@
 
 clean:
