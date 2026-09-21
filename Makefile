@@ -12,7 +12,7 @@ echo:
 test: $(SPELL_CHECKED)
 
 .%.spell: %.md
-	cat $^ | aspell list
+	cat $^ | aspell list | sort -u | tee /dev/tty | grep -v '^'
 	@touch $@
 
 clean:
