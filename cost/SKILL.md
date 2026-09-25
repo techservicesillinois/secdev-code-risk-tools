@@ -16,7 +16,7 @@ This skill requires Python.
 
 ```bash
 python -m venv .venv.analysis
-.venv.analysis/bin/pip install radon vulture
+.venv.analysis/bin/pip install radon vulture pycodestats
 ```
 
 ## Analysis
@@ -29,6 +29,8 @@ python -m venv .venv.analysis
    as a real problem worth flagging in a summary; rank `B` is borderline;
    rank `A` is fine.
 
+4. Lines of code count come from `pycodestats`
+
 4. Dead code comes from `vulture --min-confidence 80`. It is informational
    only — cross-check a few hits before recommending deletion, since dynamic
    dispatch (plugin loading via `PLUGIN_CLASS`/`TRANSFORMER_CLASS`) causes
@@ -36,11 +38,5 @@ python -m venv .venv.analysis
 
 ## Report Format
 
-5. When summarizing for a human, lead with the handful of worst offenders
-   (by MI or complexity), not raw tool output. Group by directory
-   (`plugins_user/*` complexity is expected to run higher than `glance/`
-   core, since `_build_result` methods fan out over many response fields).
-6. Always include the total count of lines of code in the report.
-7. Include the average number of lines of code per file in the report.
-
-8. Write the output to a file named `reports/cost-report.md`
+5. When summarizing for a human, lead with the handful of worst offending files.
+8. Write the output to a file named with the current date and `cost-report.md` in a new folder named `reports`.

@@ -27,6 +27,17 @@ for information about our development standards.
   - We want to help interpret and respond to these reports - they can be confusing, may contain false positives, and will raise questions.
 - Campus IT Professionals can contact securitysupport@illinois.edu.
 
+## Installation
+
+```bash
+cd ~/projects
+git clone https://github.com/techservicesillinois/secdev-code-risk-tools
+cd ~/projects/my_project_1
+gh skill install --from-local ~/projects/secdev-code-risk-tools/
+```
+
+Then follow the interactive prompts to choose between the available skills, where they should be available, and for which LLM tools.
+
 ## Data Sources
 
 For data sensitivity, see [Data Classification](https://www.cybersecurity.illinois.edu/data-classification/).
