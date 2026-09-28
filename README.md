@@ -33,7 +33,7 @@ For data sensitivity, see [Data Classification](https://www.cybersecurity.illino
 
 |Data Store|Data Type|Sensitivity|Notes|
 |----------|---------|-----------|-----|
-| Report Files | Descriptions of Code Risks Detected | Sensitive - May contain detected vulnerabilities in a live system. | Developers are encouraged to treat reports files as [TLP:Amber](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage) |
+| Report Files | Descriptions of Code Risks Detected | Sensitive - May contain detected vulnerabilities in a live system. | Developers are encouraged to treat reports files as [Traffic Light Protocol:Amber](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage) |
 | Your AI Agent Training | [AI Approved for Campus Use](https://genai.illinois.edu/ai-apps/) should not train on your source code. Other AI may train on files you allow it to access. | Sensitive | Non-public source code may be Sensitive, and should not be shared with un-approved AI. |
 
 
