@@ -27,6 +27,24 @@ for information about our development standards.
   - We want to help interpret and respond to these reports - they can be confusing, may contain false positives, and will raise questions.
 - Campus IT Professionals can contact securitysupport@illinois.edu.
 
+## Data Sources
+
+For data sensitivity, see [Data Classification](https://www.cybersecurity.illinois.edu/data-classification/).
+
+|Data Store|Data Type|Sensitivity|Notes|
+|----------|---------|-----------|-----|
+| Report Files | Descriptions of Code Risks Detected | Sensitive - May contain detected vulnerabilities in a live system. | Developers are encouraged to treat reports files as [TLP:Amber](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage) |
+| Your AI Agent Training | [AI Approved for Campus Use](https://genai.illinois.edu/ai-apps/) should not train on your source code. Other AI may train on files you allow it to access. | Sensitive | Non-public source code may be Sensitive, and should not be shared with un-approved AI. |
+
+
+## Endpoint Connections
+
+|Endpoint|Purpose|Stage|Access|Contact|
+|--------|-------|-----|------|-------|
+| Your AI Agent | Applies these patterns to your code to produce reports. | Development | Reads your code and environment | Your AI Agent Vendor |
+| OWASP Web Resources | Your agent may access OWASP resources from the OWASP web site to help analyze your code. | Development | Read | https://owasp.org/projects/top-ten |
+
+
 ## Product Support
 
 This product is supported by Cybersecurity teams at the
@@ -34,3 +52,5 @@ University of Illinois Urbana-Champaign on a best-effort basis.
 
 As of the last update to this README, the expected End-of-Life and
 End-of-Support dates of this product are 09/2027.
+
+
