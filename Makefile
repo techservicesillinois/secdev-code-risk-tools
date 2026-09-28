@@ -16,5 +16,8 @@ test: $(SPELL_CHECKED)
 	! cat $^ | aspell $(ASPELL_OPTS) list | sort -u | grep .
 	@touch $@
 
+deps-debian:
+	apt-get install -y aspell aspell-en	
+
 clean:
 	rm -f .*.spell

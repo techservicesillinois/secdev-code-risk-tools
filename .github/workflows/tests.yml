@@ -9,8 +9,10 @@ jobs:
     steps:
     - uses: actions/checkout@v7
 
+    - name: Ready for install
+      run:  apt-get update
     - name: Install aspell
-      run: sudo apt-get update && sudo apt-get install -y aspell aspell-en
+      run: make deps-debian
 
     - name: Run tests
       run: |
