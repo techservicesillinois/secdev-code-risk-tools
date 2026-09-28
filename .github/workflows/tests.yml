@@ -10,9 +10,9 @@ jobs:
     - uses: actions/checkout@v7
 
     - name: Ready for install
-      run:  apt-get update
+      run:  sudo apt-get update
     - name: Install aspell
-      run: make deps-debian
+      run: sudo make deps-debian
 
     - name: Run tests
       run: |
