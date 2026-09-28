@@ -10,34 +10,37 @@ or "how maintainable is this codebase".
 
 ## Setup
 
-This skill requires Python.
+Prompt the user for where to install tools and output reports.
+Default to `~/code-risks/`.
 
-1. Setup the environment using the following commands:
+## Setup if there are JavaScript files
+
+Use `eslint` to assess code quality.
+Use `knip` to look for dead code in JavaScript code files.
+
+## Setup if there are Python files
+
+If the project contains Python code, install Python static analysis tools:
 
 ```bash
 python -m venv .venv.analysis
 .venv.analysis/bin/pip install radon vulture pycodestats
 ```
 
-## Analysis
+Use `radon` to analyze Python file code complexity.
+    
+- Maintainability index for Python comes from `radon mi -j`. 
+- Treat rank `C` (MI less than 10) as a real problem worth flagging in a summary.
 
-2. When this guide refers to `radon`, find it at `.venv.analysis/bin/radon`.
+Use `vulture` to look for dead code in Python files.
 
-3. When this guide refers to `vulture`, find it at `.venv.analysis/bin/vulture`.
+- Use `vulture --min-confidence 80`.
+- `vulture` output is informational only — cross-check a few hits before recommending deletion, since dynamic dispatch can cause false positives.
 
-4. Maintainability index comes from `radon mi -j`. Treat rank `C` (MI < 10)
-   as a real problem worth flagging in a summary; rank `B` is borderline;
-   rank `A` is fine.
+Use `pycodestats` to generate counts of lines of code in Python files.
 
-5. Lines of code count come from `pycodestats`
-
-6. Dead code comes from `vulture --min-confidence 80`. It is informational
-   only — cross-check a few hits before recommending deletion, since dynamic
-   dispatch (plugin loading via `PLUGIN_CLASS`/`TRANSFORMER_CLASS`) causes
-   false positives.
 
 ## Report Format
 
-7. When summarizing for a human, lead with the handful of worst offending files.
-
-8. Write the output to a file named with the current date and `cost-report.md` in a new folder named `reports`.
+- When summarizing for a human, lead with the handful of worst offending files.
+- Write the output to a file named with the current date and `cost-report.md` in a new folder named `reports`.
