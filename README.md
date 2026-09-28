@@ -47,10 +47,12 @@ For data sensitivity, see [Data Classification](https://www.cybersecurity.illino
 
 ## Product Support
 
-This product is supported by Cybersecurity teams at the
+Only the latest version of this product is supported by Cybersecurity teams at the
 University of Illinois Urbana-Champaign on a best-effort basis.
 
 As of the last update to this README, the expected End-of-Life and
-End-of-Support dates of this product are 09/2027.
+End-of-Support dates of this product are January 2029.
 
+- OWASP updates the Top Ten every four years. Next expected is in 2029.
+- Success with these tools will vary by AI tool.
 
