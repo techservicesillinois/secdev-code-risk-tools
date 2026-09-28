@@ -11,7 +11,7 @@ or "how maintainable is this codebase".
 ## Setup
 
 Prompt the user for where to install tools and output reports.
-Default to `~/code-risks/`.
+Default to `.agents/.code-cost`.
 
 ## Setup if there are JavaScript files
 
