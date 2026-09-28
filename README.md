@@ -36,7 +36,7 @@ cd ~/projects/my_project_1
 gh skill install --from-local ~/projects/secdev-code-risk-tools/
 ```
 
-Then follow the interactive prompts to choose between the available skills, where they should be available, and for which LLM tools.
+Then follow the interactive prompts to choose between the available skills, where they should be available, and for which AI tools.
 
 ## Data Sources
 
