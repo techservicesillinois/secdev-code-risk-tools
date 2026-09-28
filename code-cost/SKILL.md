@@ -43,4 +43,4 @@ Use `pycodestats` to generate counts of lines of code in Python files.
 ## Report Format
 
 - When summarizing for a human, lead with the handful of worst offending files.
-- Write the output to a file named with the current date and `cost-report.md` in a new folder named `reports`.
+- Write the output to a file named with the current date and `cost-report.md` in the folder selected by the user, earlier.
