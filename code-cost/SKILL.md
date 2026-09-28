@@ -11,7 +11,7 @@ or "how maintainable is this codebase".
 ## Setup
 
 Prompt the user for where to install tools and output reports.
-Default to `.agents/`.
+Default to using a temporary directory.
 
 ## Setup if there are JavaScript files
 
@@ -39,8 +39,8 @@ Use `vulture` to look for dead code in Python files.
 
 Use `pycodestats` to generate counts of lines of code in Python files.
 
-
 ## Report Format
 
 - When summarizing for a human, lead with the handful of worst offending files.
-- Write the output to a file named with the current date and `cost-report.md` in the folder selected by the user, earlier.
+- Prompt the user where to place the output report.
+- Default to a name that includes `code-cost` and the current project name, and the current date.
