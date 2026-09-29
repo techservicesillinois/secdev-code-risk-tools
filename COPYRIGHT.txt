@@ -1,5 +1,4 @@
-Copyright <year> <primary contributor 1>, <primary contributor 2>,
-<primary contributor 3> and the University of Illinois Board of Trustees
+Copyright 2027 Zach Carrington, Edward Delaporte, Michelle Pitcel, David Riddle, and Tyler Turner and the University of Illinois Board of Trustees
 
 This program is free software: you can redistribute it and/or modify it under the terms described in LICENSE.txt, or (at your option) any later version of the same license.
 
