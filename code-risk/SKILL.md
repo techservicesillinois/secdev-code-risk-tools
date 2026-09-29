@@ -126,9 +126,10 @@ Use the report text below verbatim replacing placeholders with actual values. If
 
 The purpose of this document is to help DevOps staff associated with the University of Illinois fulfill their [responsibility](https://cam.illinois.edu/policies/fo-36) to comply with Illinois Cybersecurity standards, including[IT05](https://go.illinois.edu/secstd-IT05), [IT07](https://go.illinois.edu/secstd-IT07), [IT08](https://go.illinois.edu/secstd-IT08), and [IT13](https://go.illinois.edu/secstd-IT13).
 
-This skill is a DRAFT. Rather than share this DRAFT, please encourage colleagues to contact securitysupport@illinois.edu for the latest version.
-
 This document is [TLP:AMBER](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage), as it may contain information about potential vulnerabilities in a live campus service. This document should be shared only within the impacted team and the Privacy and Cybersecurity teams, and with their leadership, as needed, but otherwise kept confidential.
+
+This document was generated using an AI skill available at 
+https://github.com/techservicesillinois/secdev-code-risk-tools/
 
 Faculty and staff of the the University of Illinois may contact securitysupport@illinois.edu for assistance with understanding these results.
 
