@@ -30,13 +30,10 @@ for information about our development standards.
 ## Installation
 
 ```bash
-cd ~/projects
-git clone https://github.com/techservicesillinois/secdev-code-risk-tools
-cd ~/projects/my_project_1
-gh skill install --from-local ~/projects/secdev-code-risk-tools/
+gh skill install techservicesillinois/secdev-code-risk-tools
 ```
 
-Then follow the interactive prompts to choose between the available skills, where they should be available, and for which AI tools.
+Then follow the interactive prompts to choose between the available skills, where they should be available, and for which AI engines.
 
 ## Data Sources
 
