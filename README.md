@@ -22,9 +22,10 @@ for information about our development standards.
 
 - The Cybersecurity Development team at the University of Illinois maintains these AI "skills", `/code-risk` and `/code-cost` for identifying possible vulnerabilities and maintenance costs in local source code.
 - We update this AI "skill" after OWASP updates the OWASP Top Ten, roughly every four years.
-- This "skill" is intended to guide remediation efforts and is not a substitute for a mature Software Development Lifecycle, and Code Risk Discussion engagements for sensitive code.
+- This "skill" is intended to guide remediation efforts and is not a substitute for a mature Software Development Lifecycle.
   - We consider this skill suitable for exploration and education.
   - We want to help interpret and respond to these reports - they can be confusing, may contain false positives, and will raise questions.
+- We recommend also requesting a [Code Risk Discussion](https://answers.uillinois.edu/illinois/106153) engagement for more sensitive code, as we find that Code Risk Discussions catch issues that these "skills" cannot.
 - Campus faculty and staff responsible for custom code supporting campus users can contact securitysupport@illinois.edu for assistance.
 
 ## Installation
