@@ -128,7 +128,7 @@ The purpose of this document is to help DevOps staff associated with the Univers
 
 This document is [TLP:AMBER](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage), as it may contain information about potential vulnerabilities in a live campus service. This document should be shared only within the impacted team and the Privacy and Cybersecurity teams, and with their leadership, as needed, but otherwise kept confidential.
 
-This document was generated using an AI skill available at 
+This document was generated using an AI "skill" available at 
 https://github.com/techservicesillinois/secdev-code-risk-tools/
 
 Faculty and staff of the the University of Illinois may contact securitysupport@illinois.edu for assistance with understanding these results.
