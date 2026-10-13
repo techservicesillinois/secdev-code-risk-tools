@@ -54,37 +54,41 @@ Check each applicable category below and record any findings.
 - Can users access resources belonging to other users (IDOR)?
 - Is the principle of least privilege applied?
 
-#### A02 — Cryptographic Failures
-
-- Is sensitive data (PII, tokens, passwords) transmitted or stored in plaintext?
-- Are weak or deprecated algorithms in use (MD5, SHA1, DES)?
-- Are TLS/HTTPS enforced for all external connections?
-
-#### A03 — Injection
-
-- Are user inputs sanitized or parameterized before use in queries, shell commands, or template engines?
-- Is `innerHTML`, `dangerouslySetInnerHTML`, `eval()`, or `document.write()` used with user-controlled data?
-- Are SQL/NoSQL queries built with string concatenation?
-
-#### A04 — Insecure Design
-
-- Are there missing rate limits on authentication or sensitive endpoints?
-- Is business logic enforced server-side, or only client-side?
-
-#### A05 — Security Misconfiguration
+#### A02 — Security Misconfiguration
 
 - Are default credentials or example configs present?
 - Are debug modes, verbose error messages, or stack traces exposed in production?
 - Are unnecessary features, ports, or services enabled?
 - Are HTTP security headers present and correctly configured (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy)?
 
-#### A06 — Vulnerable and Outdated Components
+#### A03 — Software Supply Chain Failures
 
-- Do dependency manifests include packages with known CVEs?
+- Are dependencies regularly updated and reviewed for known vulnerabilities?
+- Are third-party packages sourced from trusted repositories?
+- Is there a process for verifying the integrity of downloaded dependencies (e.g., checksums, signatures)?
 - Are dependencies pinned to specific versions?
 - Are dev dependencies accidentally included in production builds?
 
-#### A07 — Identification and Authentication Failures
+#### A04 — Cryptographic Failures
+
+- Is sensitive data (PII, tokens, passwords) transmitted or stored in plaintext?
+- Are weak or deprecated algorithms in use (MD5, SHA1, DES)?
+- Are TLS/HTTPS enforced for all external connections?
+
+#### A05 — Injection
+
+- Are user inputs sanitized or parameterized before use in queries, shell commands, or template engines?
+- Is `innerHTML`, `dangerouslySetInnerHTML`, `eval()`, or `document.write()` used with user-controlled data?
+- Are SQL/NoSQL queries built with string concatenation?
+
+#### A06 — Insecure Design
+
+- Are there missing rate limits on authentication or sensitive endpoints?
+- Is business logic enforced server-side, or only client-side?
+- Does the application make HTTP requests to URLs supplied by the user?
+- Are allow-lists used to restrict permissible destinations?
+
+#### A07 — Authentication Failures
 
 - Are session tokens sufficiently random and rotated after login?
 - Are there protections against brute force (lockouts, CAPTCHA, rate limiting)?
@@ -100,10 +104,11 @@ Check each applicable category below and record any findings.
 - Are security-relevant events (login failures, access denials) logged?
 - Are logs free of sensitive data (passwords, tokens, PII)?
 
-#### A10 — Server-Side Request Forgery (SSRF)
+#### A10 — Mishandling of Exceptional Conditions
 
-- Does the application make HTTP requests to URLs supplied by the user?
-- Are allow-lists used to restrict permissible destinations?
+- Are exceptional conditions (errors, edge cases) properly handled and logged?
+- Are custom error pages used to avoid information leakage?
+- Are try/catch blocks used appropriately to prevent application crashes?
 
 #### Additional Checks
 
@@ -128,7 +133,7 @@ The purpose of this document is to help DevOps staff associated with the Univers
 
 This document is [TLP:AMBER](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage), as it may contain information about potential vulnerabilities in a live campus service. This document should be shared only within the impacted team and the Privacy and Cybersecurity teams, and with their leadership, as needed, but otherwise kept confidential.
 
-This document was generated using an AI "skill" available at 
+This document was generated using an AI "skill" available at
 https://github.com/techservicesillinois/secdev-code-risk-tools/
 
 Faculty and staff of the the University of Illinois may contact securitysupport@illinois.edu for assistance with understanding these results.
@@ -138,15 +143,15 @@ Faculty and staff of the the University of Illinois may contact securitysupport@
 | OWASP Category | Count |
 |-----------------------------------------------------|-------|
 | A01 — Broken Access Control | N |
-| A02 — Cryptographic Failures | N |
-| A03 — Injection | N |
-| A04 — Insecure Design | N |
-| A05 — Security Misconfiguration | N |
-| A06 — Vulnerable and Outdated Components | N |
-| A07 — Identification and Authentication Failures | N |
+| A02 — Security Misconfiguration | N |
+| A03 — Software Supply Chain Failures | N |
+| A04 — Cryptographic Failures | N |
+| A05 — Injection | N |
+| A06 — Insecure Design | N |
+| A07 — Authentication Failures | N |
 | A08 — Software and Data Integrity Failures | N |
 | A09 — Security Logging and Monitoring Failures | N |
-| A10 — Server-Side Request Forgery (SSRF) | N |
+| A10 — Mishandling of Exceptional Conditions| N |
 | Other Findings | N |
 
 ______________________________________________________________________
