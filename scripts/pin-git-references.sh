@@ -3,7 +3,7 @@
 set -euo pipefail
 
 mode="check"
-root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+root_dir="$(pwd)"
 
 usage() {
     printf 'Usage: %s [--check|--write]\n' "${0##*/}"
