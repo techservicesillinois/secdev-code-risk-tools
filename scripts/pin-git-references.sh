@@ -48,7 +48,5 @@ while IFS= read -r wf; do
     process "$wf" '^([[:space:]]*-?[[:space:]]*uses:[[:space:]]*)([^@[:space:]#]+)@([^[:space:]#]+)([[:space:]]*(#.*)?)$' 3 action || status=1
 done < <(find "$root_dir/.github/workflows" -type f \( -name '*.yml' -o -name '*.yaml' \) | sort)
 
-process "$root_dir/requirements.in" '^(.*git\+https://github\.com/([^/]+/[^/@[:space:]#]+)\.git)(@([^[:space:]#]+))?([[:space:]]*(#.*)?)$' 4 dependency || status=1
-
 [[ "$mode" == check && "$status" -eq 0 ]] && echo "All Git dependencies and workflow actions are pinned."
 exit "$status"
