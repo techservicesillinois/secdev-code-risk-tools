@@ -31,7 +31,7 @@ for information about our development standards.
 ## Installation
 
 ```bash
-gh skill install techservicesillinois/secdev-code-risk-tools --scope user
+gh skill install --scope user techservicesillinois/secdev-code-risk-tools
 ```
 
 Then follow the interactive prompts to choose between the available skills, where they should be available, and for which AI engines.
